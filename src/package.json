@@ -18,6 +18,7 @@
   "dependencies": {
     "babel-core": "6.x",
     "gulp": "3.x",
-    "gulp-babel": "7.x"
+    "gulp-babel": "7.x",
+    "gulp-autoprefixer": "4.x"
   }
 }
