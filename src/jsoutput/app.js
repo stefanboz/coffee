@@ -1,7 +1,7 @@
 $(function () {
 
-    require('../js/home.js');
-    require('../js/single.js');
+    require('../jsoutput/home.js');
+    require('../jsoutput/single.js');
 
     var Application = Backbone.Router.extend({
 
