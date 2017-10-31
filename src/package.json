@@ -1,0 +1,23 @@
+{
+  "name": "coffeeshops-app",
+  "version": "1.0.0",
+  "description": "Web apps that finds nearest coffee shops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "foursquare",
+    "geolocation",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Stefan Bozic",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "6.x",
+    "gulp": "3.x",
+    "gulp-babel": "7.x"
+  }
+}
