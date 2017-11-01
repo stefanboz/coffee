@@ -69,6 +69,7 @@ img {
     text-decoration: none;
     background-color: #28a8e0;
     height:30px;
+    margin: 0 5px;
   }
   .sort:hover {
     text-decoration: none;

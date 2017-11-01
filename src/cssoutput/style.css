@@ -69,6 +69,7 @@ img {
     text-decoration: none;
     background-color: #28a8e0;
     height:30px;
+    margin: 0 5px;
   }
   .sort:hover {
     text-decoration: none;
@@ -288,59 +289,4 @@ a:active {
     border-color: #8c8c8c;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
-}
-
-
-
-/*** MEDIA QUERIES ***/
-@media (min-width: 992px) and (max-width: 1199px) {
-    .container {
-        width: 970px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        width: 750px;
-    }
-}
-
-@media (max-width: 767px) {
-    .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .list {
-        display: block;
-        text-align: center;
-    }
-
-    .single-venue {
-        display: inline-block;
-        width: 33%;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}
-
-@media (max-width: 500px) {
-    .single-venue {
-        width: 55%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .single-shop-text {
-        font-size: 0.875em;
-    }
-}
-
-@media (max-width: 350px) {
-    .sort {
-        margin: 10px 0;
-    }
 }
