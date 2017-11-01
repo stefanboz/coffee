@@ -8,10 +8,13 @@ var HomeView = Backbone.View.extend({
         'click .coffee-shop-name': 'showSingleCofeeShop'
     },
     render: function () {
-        var template = loadTemplate('../templates/home.html');
+        let template = loadTemplate('../templates/home.html');
         this.$el.html(template(this.model));
 
         let contentContainer = document.querySelector('#content');
+
+        let date = new Date();
+        let formattedDate = moment(date).format('YYYYMMDD');
 
         (function getLocation() {
             if (navigator.geolocation) {
@@ -31,7 +34,7 @@ var HomeView = Backbone.View.extend({
                     client_secret: 'VG1BLQSGV4XZHS2IWJBSU3MXO3G2HBCWLGZEHFCWK44RYTJY',
                     ll: position.coords.latitude + ',' + position.coords.longitude,
                     query: 'coffee',
-                    v: '20171030',
+                    v: formattedDate,
                     limit: 10,
                     openNow: 1,
                     venuePhotos: 1,

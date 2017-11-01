@@ -8,11 +8,14 @@ var HomeView = Backbone.View.extend({
         'click .coffee-shop-name' : 'showSingleCofeeShop'
     },
     render : function(){
-        var template = loadTemplate('../templates/home.html');
+        let template = loadTemplate('../templates/home.html');
         this.$el.html(template(this.model));
 
         let contentContainer = document.querySelector('#content');
-        
+
+        let date = new Date();
+        let formattedDate = moment(date).format('YYYYMMDD');
+
         (function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, geolocationDenied);
@@ -31,7 +34,7 @@ var HomeView = Backbone.View.extend({
                   client_secret: 'VG1BLQSGV4XZHS2IWJBSU3MXO3G2HBCWLGZEHFCWK44RYTJY',
                   ll: position.coords.latitude + ',' + position.coords.longitude,
                   query: 'coffee',
-                  v: '20171030',
+                  v: formattedDate,
                   limit: 10,
                   openNow: 1,
                   venuePhotos: 1,
@@ -83,13 +86,16 @@ var HomeView = Backbone.View.extend({
         console.log(distance);
         let venueId = e.target.dataset.id;
 
+        let date = new Date();
+        let today = moment(date).format('YYYYMMDD');
+
         $.ajax({
             method: 'get',
             url: 'https://api.foursquare.com/v2/venues/' + venueId + '?',
             data: {
                 client_id: 'PYMHQS1HKI4BTDOSZVGCYZSGISZBUU1W0D4XVRXWPYXI0MXW',
                 client_secret: 'VG1BLQSGV4XZHS2IWJBSU3MXO3G2HBCWLGZEHFCWK44RYTJY',
-                v: '20171030'
+                v: today
             },
             success: function(response) {
                 let singleShop = response.response.venue;
