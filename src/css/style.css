@@ -1,0 +1,349 @@
+/*** reset.css ***/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+  }
+
+
+
+/*** SORT BUTTONS ***/
+  .sort {
+    padding:8px 30px;
+    border-radius: 6px;
+    border:none;
+    display:inline-block;
+    color:#fff;
+    text-decoration: none;
+    background-color: #28a8e0;
+    height:30px;
+    margin: 0 5px;
+  }
+  .sort:hover {
+    text-decoration: none;
+    background-color:#1b8aba;
+  }
+  .sort:focus {
+    outline:none;
+  }
+  .sort:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    content:"";
+    position: relative;
+    top:-10px;
+    right:-5px;
+  }
+  .sort.asc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    content:"";
+    position: relative;
+    top:13px;
+    right:-5px;
+  }
+  .sort.desc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    content:"";
+    position: relative;
+    top:-10px;
+    right:-5px;
+  }
+
+
+
+/*** GENERAL ***/
+
+body {
+    font-size: 16px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 { font-weight: 700; }
+
+h1 { font-size: 2em; }
+
+h3 { font-size: 1.5em; }
+
+h4 { font-size: 1.35em; }
+
+p { font-size: 1em; }
+
+a,
+a:active {
+    text-decoration: none;
+    color: #2d5be3;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.title {
+    text-align: center;
+    margin: 40px 0;
+    font-family: 'Pacifico', cursive;
+}
+
+/*** HOME PAGE ***/
+
+#content {
+    text-align: center;
+}
+
+.error {
+    padding: 10px 15px;
+    border: 1px solid red;
+    display: inline-block;
+    background-color: #ffe7e7;
+    border-radius: 5px;
+}
+
+.list {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.single-venue {
+    width: 20%;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    padding: 50px 10px;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+.single-venue:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,.2);
+}
+
+.single-venue > * {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.coffee-shop-name {
+    font-size: 1.2em;
+}
+.coffee-shop-name:hover {
+    font-weight: 500;
+}
+
+.venue-distance-container {
+    font-size: 0.95em;
+}
+
+.venue-price-container {
+    display: none;
+}
+
+/*** SINGLE SHOP PAGE ***/
+
+.single-shop-wrapper > div {
+    margin-bottom: 15px;
+}
+
+.single-shop-name {
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.current-distance,
+.price-range,
+.tips {
+    text-align: left;
+}
+
+.single-shop-wrapper .fa {
+    width: 18px;
+    margin-right: 15px;
+}
+
+.single-shop-text > div {
+    margin-bottom: 15px;
+}
+
+.user-reviews-coffee {
+    margin: 10px 0 0 50px;
+}
+
+.no-coffee-reviews {
+    font-style: italic;
+}
+
+.tip-coffee {
+    margin-bottom: 15px;
+    color: #505050;
+    font-style: italic;
+    position: relative;
+    padding-left: 10px;
+}
+.tip-coffee:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "''";
+}
+
+.tip-coffee:first-of-type {
+    margin-top: 15px;
+}
+
+.btn-back {
+    padding: 6px 12px;
+    font-size: 0.875em;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+}
+.btn-back:hover {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+.btn-back:active {
+    outline: 0;    
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.btn-back:focus {
+    background-color: #e6e6e6;
+    border-color: #8c8c8c;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .list {
+        display: block;
+        text-align: center;
+    }
+
+    .single-venue {
+        display: inline-block;
+        width: 33%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .single-venue {
+        width: 55%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .single-shop-text {
+        font-size: 0.875em;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .sort {
+        margin: 10px 0;
+    }
+}
