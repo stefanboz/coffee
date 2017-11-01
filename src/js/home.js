@@ -1,3 +1,7 @@
+/**
+ * Created by Stefan on 30/10/2017
+ */
+
 var HomeView = Backbone.View.extend({
     el : '#main',
     events : {
