@@ -13,7 +13,7 @@ var HomeView = Backbone.View.extend({
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, geolocationDenied);
             } else {
-                contentContainer.innerHTML = '<div class="geolocation-error">Error: Geolocation is not supported by this browser.</div>';
+                contentContainer.innerHTML = '<div class="error geolocation-error">Error: Geolocation is not supported by this browser.</div>';
             }
         })();
 
@@ -58,6 +58,8 @@ var HomeView = Backbone.View.extend({
                 },
                 error: function (xhr) {
                     console.log(xhr);
+                    console.log('error occured');
+                    container.innerHTML = '<div class="error">Error occurred. Please refresh the page and try again.</div>';
                 }
             });
         }
@@ -138,8 +140,10 @@ var HomeView = Backbone.View.extend({
                     $('.user-reviews-coffee').append('<div class="tip-coffee">' + coffeeTip.text + '</div>');
                 }
             },
-            error: function (error) {
-                console.log(error);
+            error: function (xhr) {
+                console.log(xhr);
+                let singleShopWrapper = $('.single-shop-wrapper');
+                singleShopWrapper.innerHTML = '<div class="error">Error occurred. Please refresh the page and try again.</div>';
             }
         });
     }
