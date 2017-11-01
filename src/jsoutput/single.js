@@ -5,7 +5,7 @@
 var SingleShopView = Backbone.View.extend({
     el: '#content',
     events: {
-        'click .back': 'showAllVenues'
+        'click .btn-back': 'showAllVenues'
     },
     render: function () {
         let template = loadTemplate('../templates/single.html');
