@@ -34,7 +34,7 @@ var HomeView = Backbone.View.extend({
                     client_secret: 'VG1BLQSGV4XZHS2IWJBSU3MXO3G2HBCWLGZEHFCWK44RYTJY',
                     ll: position.coords.latitude + ',' + position.coords.longitude,
                     query: 'coffee',
-                    v: formattedDate,
+                    v: '20171101',
                     limit: 10,
                     openNow: 1,
                     venuePhotos: 1,
@@ -85,13 +85,16 @@ var HomeView = Backbone.View.extend({
         console.log(distance);
         let venueId = e.target.dataset.id;
 
+        let newDate = new Date();
+        let today = moment(newDate).format('YYYYMMDD');
+
         $.ajax({
             method: 'get',
             url: 'https://api.foursquare.com/v2/venues/' + venueId + '?',
             data: {
                 client_id: 'PYMHQS1HKI4BTDOSZVGCYZSGISZBUU1W0D4XVRXWPYXI0MXW',
                 client_secret: 'VG1BLQSGV4XZHS2IWJBSU3MXO3G2HBCWLGZEHFCWK44RYTJY',
-                v: '20171030'
+                v: '20171101'
             },
             success: function (response) {
                 let singleShop = response.response.venue;
